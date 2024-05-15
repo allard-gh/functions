@@ -7,8 +7,11 @@
 # 3 x 5 = 15    # enz.
 
 # De header van de functie is:
-def print_tafel(factor) :
+def print_tafel(factor):
+    for i in range(1, 11):
+        print(i, 'x', factor, '=', i * factor)
 
+print_tafel(5)
 
 
 # Opmerking: Maak een testset om de functie te testen. Gebruik het hoofdprogramma om die test uit te voeren.
@@ -20,10 +23,17 @@ def print_tafel(factor) :
 
 # De header van de functie is:
 
-def is_veelvoud(a, b) :
+def is_veelvoud(a, b):
+    # Schrijf een eenvoudig hoofdprogramma om je functie in te gebruiken.
+    if a % b == 0 or b % a == 0:
+        return True
+    else:
+        return False
 
 
-# Schrijf een eenvoudig hoofdprogramma om je functie in te gebruiken.
+print(is_veelvoud(4, 2))
+
+
 
 
 
@@ -37,6 +47,14 @@ def is_veelvoud(a, b) :
 
 # De header van de functie is:
 def print_productregel(aantal, tafel) :
+    print(aantal, 'x', tafel, '=', aantal * tafel)
+
+print_productregel(2, 5)
+print_productregel(6, 8)
+
+def print_tafel2(factor):
+    for i in range(1, 11):
+        print_productregel(i, factor)
 
 
 
@@ -47,17 +65,20 @@ def print_productregel(aantal, tafel) :
 # Pas vervolgens de body van de functie print_tafel() uit opgave 1 aan.
 # Maak in deze body gebruik van de functie print_productregel().
 
-
 # Test vervolgens de nieuwe versie van print_tafel met hetzelfde testprogramma dat je bij opgave 1 gebruikt hebt.
 # In het geval van een blackbox test kun je dus ook dezelfde testset gebruiken.
 
+print_tafel2(5)
 
 # Opgave 4
-
 # Schrijf een functie die Celsius naar Fahrenheit converteert, met de volgende header:
 
 def cels_to_fahr (celsius) :
+    fahrenheit = (9 / 5) * celsius + 32
+    return fahrenheit.__round__(2)
 
+print(cels_to_fahr(40))
+print(cels_to_fahr(32))
 
 
 # N.B. De formule voor de conversie is als volgt: fahrenheit = (9 / 5) * celsius + 32

@@ -23,23 +23,12 @@ print_hello_world()  # Uitkomst: Hello, World!
 factor = 5
 
 
-def print_tafel_regel(i, factor):
-    print(i, ' x ', factor, ' = ', i * factor)
-
-
-for i in range(1, 11):
-    print_tafel_regel(i, factor)
-
-
-
-
-
 # ==========================================
 # Opdracht 2:
 # Maak een dobbelsteen met de volgende deelopdrachten.
 #
 # Opdracht 2a:
-# Maak met behulp van de bibliotheek 'random' (library) een functie die een willekeurig getal tussen 1 en 6 genereert.
+# Maak met behulp van de bibliotheek (library) 'random' een functie die een willekeurig getal tussen 1 en 6 genereert.
 # Zorg dat de functie twee argumenten ontvangt, namelijk 'min' en 'max'. Voor het minimum (1) en maximum (6).
 # Voer de functie 10 keer uit (met een for-loop). Als het willekeurige getal is gegenereert print je het getal.
 #
@@ -52,34 +41,12 @@ for i in range(1, 11):
 # Er is 2 keer een 6 gegooid
 # ==========================================
 
-import random  # importeert de library 'random'. Voor de duidelijkheid van de opdracht staat deze import hier. Maar die hoort bovenaan het bestand te staan.
 
-aantal_keer_zes = 0
-
-
-def genereer_willekeurig_getal(min, max):
-    return random.randrange(min, max)
-
-
-def controleer_op_zes(willekeurig_getal):
-    if willekeurig_getal == 6:
-        return True
-    else:
-        return False
-
-
-for worp in range(10):
-    willekeurig_getal = genereer_willekeurig_getal(1, 7)
-    print(willekeurig_getal, end=' ')
-    if controleer_op_zes(willekeurig_getal):
-        aantal_keer_zes += 1
-
-print('\nEr is', aantal_keer_zes, 'keer een 6 gegooid')  # Uitkomst (voorbeeld): Er is 2 keer een 6 gegooid
 
 
 # ==========================================
 # Opdracht 3:
-# Omrekenen van Fahrenheit naar Celsius.
+# Omrekenen van Fahrenheit naar Celsius. Gegeven zijn temperaturen van drie steden in Fahrenheit.
 #
 # Schrijf een functie die de temperatuur in Fahrenheit ontvangt als argument en deze omrekent naar Celsius.
 # De formule voor de conversie is als volgt: celsius = (fahrenheit - 32) * 5/9
@@ -95,16 +62,3 @@ print('\nEr is', aantal_keer_zes, 'keer een 6 gegooid')  # Uitkomst (voorbeeld):
 temp_in_fahr_stockholm = 65
 temp_in_fahr_sydney = 75
 temp_in_fahr_cairo = 104
-
-
-def fahrenheit_naar_celsius(fahrenheit):
-    return (fahrenheit - 32) * 5 / 9
-
-
-def rond_af_op_hele_getallen(celsius):
-    return round(celsius)
-
-
-print(rond_af_op_hele_getallen(fahrenheit_naar_celsius(temp_in_fahr_stockholm)))  # Uitkomst: 18
-print(rond_af_op_hele_getallen(fahrenheit_naar_celsius(temp_in_fahr_sydney)))  # Uitkomst: 24
-print(rond_af_op_hele_getallen(fahrenheit_naar_celsius(temp_in_fahr_cairo)))  # Uitkomst: 40

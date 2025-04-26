@@ -2,6 +2,8 @@
 # Voorbeeld Opdracht
 # Schrijf een functie die de tekst “Hello, World!” print. Roep vervolgens de functie aan.
 # ==========================================
+import random
+
 
 def print_hello_world():
     print('Hello, World!')
@@ -21,6 +23,22 @@ print_hello_world()  # Uitkomst: Hello, World!
 
 factor = 5
 
+def tafel_van_vijf(aantal):
+    print(f'{aantal} x {factor} = {aantal * factor}')
+
+for i in range(1, 11):
+    tafel_van_vijf(i)
+
+#proberen met gebruikersinput
+# tafel = int(input('Van welk getal wil je de tafel weten? '))
+# level = int(input('Tot welke trap wil je de tafel? '))
+# print(f'De tafel van {tafel} tot trap {level}: ')
+#
+# def tot_waar(trap):
+#     print(f'{trap} * {tafel} = {trap * tafel}')
+#
+# for l in range(1, level + 1):
+#     tot_waar(l)
 
 # ==========================================
 # Opdracht 2:
@@ -29,7 +47,7 @@ factor = 5
 # Opdracht 2a:
 # Maak met behulp van de bibliotheek (library) 'random' een functie die een willekeurig getal tussen 1 en 6 genereert.
 # Zorg dat de functie twee argumenten ontvangt, namelijk 'min' en 'max'. Voor het minimum (1) en maximum (6).
-# Voer de functie 10 keer uit (met een for-loop). Als het willekeurige getal is gegenereert print je het getal.
+# Voer de functie 10 keer uit (met een for-loop). Als het willekeurige getal is gegenereerd print je het getal.
 #
 # Opdracht 2b;
 # Maak een variabele aan 'aantal_keer_zes' en zet deze op 0. Schrijf een functie die aan het eind print hoe vaak er een 6 is gegooid.
@@ -40,8 +58,29 @@ factor = 5
 # Er is 2 keer een 6 gegooid
 # ==========================================
 
+aantal_keer_zes = 0
 
+import random
+def dobbel(minimum, maximum):
+    return random.randint(minimum, maximum)
 
+for i in range(10):
+    worp = dobbel(1, 6)
+    print(worp, end=' ')
+
+print()
+
+def dobbel_twee(aantal):
+    global aantal_keer_zes
+    aantal_keer_zes = 0
+    for worp in range(aantal):
+        getal = random.randint(1, 6)
+        print(getal, end=' ')
+        if getal == 6:
+            aantal_keer_zes += 1
+    print(f'\nAantal keer 6 gegooid: {aantal_keer_zes}')
+
+dobbel_twee(10)
 
 # ==========================================
 # Opdracht 3:
@@ -49,7 +88,7 @@ factor = 5
 #
 # Schrijf een functie die de temperatuur in Fahrenheit ontvangt als argument en deze omrekent naar Celsius.
 # De formule voor de conversie is als volgt: celsius = (fahrenheit - 32) * 5/9
-# Schrijf ook een functie die de temperatuur afrond in hele getallen.
+# Schrijf ook een functie die de temperatuur afrondt in hele getallen.
 # print de temperatuur in Celsius afgerond op hele getallen.
 #
 # Verwachte uitkomst:

@@ -8,7 +8,6 @@ def print_hello_world():
 
 print_hello_world()  # Uitkomst: Hello, World!
 
-
 # ==========================================
 # Opdracht 1:
 # Print de tafel van 5 met behulp van een for-loop en een functie (genaamd 'print_tafel_regel').

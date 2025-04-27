@@ -62,6 +62,7 @@ aantal_keer_zes = 0
 
 import random
 def dobbel(minimum, maximum):
+    """willekeurig getal tussen meegegeven min en max"""
     return random.randint(minimum, maximum)
 
 for i in range(10):
@@ -71,6 +72,7 @@ for i in range(10):
 print()
 
 def dobbel_twee(aantal):
+    """dobbelsteen waarbij aantal keer 6 geteld wordt. Aantal worpen moet meegegeven worden"""
     global aantal_keer_zes
     aantal_keer_zes = 0
     for worp in range(aantal):
@@ -100,3 +102,17 @@ dobbel_twee(10)
 temp_in_fahr_stockholm = 65
 temp_in_fahr_sydney = 75
 temp_in_fahr_cairo = 104
+
+def f_to_c(fahrenheit):
+    """omrekenen fahrenheit naar celsius"""
+    celsius = (fahrenheit - 32) * 5/9
+    return celsius
+
+def afronden(getal):
+    """afronden op heel getal"""
+    afgerond = round(getal)
+    return afgerond
+
+print(afronden(f_to_c(temp_in_fahr_stockholm)))
+print(afronden(f_to_c(temp_in_fahr_sydney)))
+print(afronden(f_to_c(temp_in_fahr_cairo)))

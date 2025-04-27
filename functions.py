@@ -116,3 +116,23 @@ def afronden(getal):
 print(afronden(f_to_c(temp_in_fahr_stockholm)))
 print(afronden(f_to_c(temp_in_fahr_sydney)))
 print(afronden(f_to_c(temp_in_fahr_cairo)))
+
+# van de uitwerkingen (global wordt hier niet gebruikt)
+# def genereer_willekeurig_getal(min, max):
+#     return random.randrange(min, max)
+#
+#
+# def controleer_op_zes(willekeurig_getal):
+#     if willekeurig_getal == 6:
+#         return True
+#     else:
+#         return False
+#
+#
+# for worp in range(10):
+#     willekeurig_getal = genereer_willekeurig_getal(1, 7)
+#     print(willekeurig_getal, end=' ')
+#     if controleer_op_zes(willekeurig_getal):
+#         aantal_keer_zes += 1
+#
+# print('\nEr is', aantal_keer_zes, 'keer een 6 gegooid')
